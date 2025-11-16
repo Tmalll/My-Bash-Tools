@@ -35,6 +35,8 @@ cd /d %~dp0
 git add -A
 git commit -m "update %date% %time%"
 git push origin master
+
+pause
 goto :EOF
 
 :: [2] 同步更新
@@ -45,6 +47,8 @@ git pull origin master
 git add -A
 git commit -m "sync update %date% %time%"
 git push origin master
+
+pause
 goto :EOF
 
 :: [3] 强制覆盖远程
@@ -53,6 +57,8 @@ cd /d %~dp0
 git add -A
 git commit -m "force override %date% %time%"
 git push origin master --force
+
+pause
 goto :EOF
 
 :: [4] 彻底重置仓库
@@ -67,6 +73,8 @@ git branch -M master
 git add -A
 git commit -m "initial clean commit %date% %time%"
 git push origin master --force
+
+pause
 goto :EOF
 
 pause
